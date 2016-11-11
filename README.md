@@ -21,7 +21,11 @@
 
 ### mongodb 基本连接<a id="orgheadline1"></a>
 
+<<<<<<< HEAD
     运行环境: python3.5
     代码文件夹:mongodb_test  
     lib1(未使用ORM): pymongo, flask_script
     lib2(使用ORM): flask_mongoengine, flask_script
+=======
+代码:mongodb<sub>test</sub>
+>>>>>>> 13e5545d7a4b0ed8efdbd8f455a06e2561afdf7e
