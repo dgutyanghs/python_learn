@@ -2,5 +2,8 @@
 ** flask 学习过程中练手代码 
 *** mongodb 基本连接
 #+BEGIN_EXAMPLE
-    代码文件夹:mongodb_test   
+    运行环境: python3.5
+    代码文件夹:mongodb_test  
+    lib1(未使用ORM): pymongo, flask_script
+    lib2(使用ORM): flask_mongoengine, flask_script
 #+END_EXAMPLE
