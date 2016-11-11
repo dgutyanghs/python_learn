@@ -20,7 +20,6 @@
 ## flask 学习过程中练手代码<a id="orgheadline2"></a>
 
 ### mongodb 基本连接<a id="orgheadline1"></a>
-
     运行环境: python3.5
     代码文件夹:mongodb_test  
     lib1(未使用ORM): pymongo, flask_script
