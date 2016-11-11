@@ -4,7 +4,20 @@
 #+BEGIN_EXAMPLE
     运行环境: python3.5
     代码文件夹:mongodb_test  
-    lib1(未使用ORM): pymongo, flask_script
+    lib1(未使用ORM): pymongo, flask_script,  Manager
     lib2(使用ORM): flask_mongoengine, flask_script
     代码:mongodb_test 
+#+END_EXAMPLE
+*** mySQL 连接
+***** mySQL 服务器启动命令
+#+BEGIN_EXAMPLE
+  $ mysql.server start
+  $ mysql.server stop
+  $ mysql.server restart
+#+END_EXAMPLE
+***** mySQL 连接服务器 
+#+BEGIN_EXAMPLE
+  $ mysql -u root -p
+if have password , then enter....
+  $ yourpassword
 #+END_EXAMPLE
