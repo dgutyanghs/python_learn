@@ -20,4 +20,5 @@
   $ mysql -u root -p
 if have password , then enter....
   $ yourpassword
+
 #+END_EXAMPLE
