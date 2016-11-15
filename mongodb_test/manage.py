@@ -55,6 +55,7 @@ def query_users():
 def find_user(var):
     # user = User.objects(__raw__ = {'name':<var>})
     # user = User.objects(name='hello3', email = 'hello3@qq.com')
+    #查询具体某个user 
     user = User.objects(name=var)
     print (user)
     # users = User.objects.all()
