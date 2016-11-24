@@ -22,3 +22,11 @@ if have password , then enter....
   $ yourpassword
 
 #+END_EXAMPLE
+** python版本相关
+*** virtualenv 下指定python版本
+#+BEGIN_EXAMPLE
+when create virtual environment, using shell command:
+$ virtualenv --python=python2.7 venv
+创建 venv
+#+END_EXAMPLE
+
