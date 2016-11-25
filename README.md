@@ -2,7 +2,7 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline8">1. Python 自学</a>
+<li><a href="#orgheadline11">1. Python 自学</a>
 <ul>
 <li><a href="#orgheadline5">1.1. flask 学习过程中练手代码</a>
 <ul>
@@ -15,13 +15,18 @@
 <li><a href="#orgheadline6">1.2.1. virtualenv 下指定python版本</a></li>
 </ul>
 </li>
+<li><a href="#orgheadline10">1.3. scrapy初试</a>
+<ul>
+<li><a href="#orgheadline9">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-# Python 自学<a id="orgheadline8"></a>
+# Python 自学<a id="orgheadline11"></a>
 
 ## flask 学习过程中练手代码<a id="orgheadline5"></a>
 
@@ -54,3 +59,12 @@
     when create virtual environment, using shell command:
     $ virtualenv --python=python2.7 venv
     创建 venv
+
+## scrapy初试<a id="orgheadline10"></a>
+
+### 简单的豆瓣网爬取:tutorial<a id="orgheadline9"></a>
+
+1.  使用scrapy, python2.7
+
+        $scrapy crawl dmoz  
+        在项目主目录下执行
