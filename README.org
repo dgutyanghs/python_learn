@@ -22,3 +22,18 @@ if have password , then enter....
   $ yourpassword
 
 #+END_EXAMPLE
+** python版本相关
+*** virtualenv 下指定python版本
+#+BEGIN_EXAMPLE
+when create virtual environment, using shell command:
+$ virtualenv --python=python2.7 venv
+创建 venv
+#+END_EXAMPLE
+** scrapy初试 
+*** 简单的豆瓣网爬取:tutorial
+**** 使用scrapy, python2.7
+#+BEGIN_EXAMPLE
+$scrapy crawl dmoz  
+在项目主目录下执行 
+#+END_EXAMPLE
+
