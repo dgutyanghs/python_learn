@@ -12,4 +12,6 @@ class PopianotestItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     # title = scrapy.Field()
+    sortIndex = scrapy.Field()
+    index = scrapy.Field()
     link = scrapy.Field()

@@ -7,8 +7,9 @@ import  scrapy
 from urlparse import urljoin
 from popianotest.items import PopianotestItem
 
+
 class Popiano(scrapy.Spider):
-    name = "popianotest"
+    name = "popianotest1"
     allowed_domains = ["www.popiano.org"]
     start_urls = [
         "http://bbs.popiano.org/forum.php?mod=guide",
@@ -18,12 +19,21 @@ class Popiano(scrapy.Spider):
 
     def parse(self, response):
         links = response.xpath('//th[contains(@class,"common")]/a/@href').extract()
+        # i = 2
+        # items = []
         for link in links:
             item = PopianotestItem()
             full_link = urljoin(response.url, link)
             print full_link
             item['link'] = full_link
-            yield item 
+            # i += 1
+            item['index'] = "AlexT"
+            return item
+            # yield item 
+            # items.append(item)
+
+
+        # return items
 
 
 # <html>

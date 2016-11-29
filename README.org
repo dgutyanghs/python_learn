@@ -22,6 +22,18 @@ if have password , then enter....
   $ yourpassword
 
 #+END_EXAMPLE
+***** Change MySQL password
+#+BEGIN_SRC sql
+mysql> SET PASSWORD FOR 'tom'@'localhost' = PASSWORD('foobar');
+mysql> FLUSH PRIVILEGES;
+mysql> quit;
+
+$ mysql -u tom -p
+$ yourpassword
+
+then login ok
+
+#+END_SRC
 ** python版本相关
 *** virtualenv 下指定python版本
 #+BEGIN_EXAMPLE
@@ -36,4 +48,4 @@ $ virtualenv --python=python2.7 venv
 $scrapy crawl dmoz  
 在项目主目录下执行 
 #+END_EXAMPLE
-
+ 
