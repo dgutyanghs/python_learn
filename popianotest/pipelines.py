@@ -24,12 +24,10 @@ class PopianotestPipeline(object):
         # pdb.set_trace()
         try:
             
-            # sql = "INSERT INTO poptable (index, link) VALUES (%s, %s)"
-            # self.cursor.execute(sql, (item['index'].encode('utf-8'), item['link'].encode('utf-8')))
-            self.cursor.execute("""INSERT INTO poptable (sortIndex, index, link) VALUES (%d,%s, %s)""", (1, item['index'].encode('utf-8'), item['link'].encode('utf-8')))
+            print "commit db !!!!(%d,%s)" % (item['link_num'], item['link'])  
+            self.cursor.execute("INSERT INTO poptable (link_num, link) VALUES (%s, %s)", (item['link_num'], item['link'].encode('utf-8')))
             self.conn.commit()
 
-            print "commit db !!!!(%d,%s)" % (item['index'], item['link'])  
         except MySQLdb.Error, e:
             print "!!!Error %d: %s" % (e.args[0], e.args[1])
 

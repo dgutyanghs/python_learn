@@ -19,21 +19,17 @@ class Popiano(scrapy.Spider):
 
     def parse(self, response):
         links = response.xpath('//th[contains(@class,"common")]/a/@href').extract()
-        # i = 2
-        # items = []
+        i = 0
         for link in links:
             item = PopianotestItem()
             full_link = urljoin(response.url, link)
             print full_link
             item['link'] = full_link
-            # i += 1
-            item['index'] = "AlexT"
-            return item
-            # yield item 
-            # items.append(item)
+            i += 1
+            item['link_num'] = i
+            yield item 
 
 
-        # return items
 
 
 # <html>
