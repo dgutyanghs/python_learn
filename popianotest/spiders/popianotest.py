@@ -3,13 +3,12 @@
 
 import  scrapy
 
-# from popiano.items import PopianoItem
 from urlparse import urljoin
 from popianotest.items import PopianotestItem
 
 
 class Popiano(scrapy.Spider):
-    name = "popianotest1"
+    name = "popianotest2"
     allowed_domains = ["www.popiano.org"]
     start_urls = [
         "http://bbs.popiano.org/forum.php?mod=guide",
