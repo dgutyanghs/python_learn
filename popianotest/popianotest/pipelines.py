@@ -24,7 +24,7 @@ class PopianotestPipeline(object):
         # pdb.set_trace()
         try:
             
-            print "commit db !!!!(%s,%s)" % (item['link_num'], item['link'])  
+            print "commit db !!!!(%d,%s)" % (item['link_num'], item['link'])  
             self.cursor.execute("INSERT INTO poptable (link_num, link) VALUES (%s, %s)", (item['link_num'], item['link'].encode('utf-8')))
             self.conn.commit()
 
