@@ -49,3 +49,8 @@ $scrapy crawl dmoz
 在项目主目录下执行 
 #+END_EXAMPLE
  
+*** Meizi网站图片爬取：Meizitu
+**** 使用scrapy， python2.7, requests 
+#+BEGIN_EXAMPLE
+$ scrapy crawl meizi
+#+END_EXAMPLE
