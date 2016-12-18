@@ -2,23 +2,24 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8dc3b15">1. Python 自学</a>
+<li><a href="#orgc3f4fc7">1. Python 自学</a>
 <ul>
-<li><a href="#orgea0be60">1.1. flask 学习过程中练手代码</a>
+<li><a href="#org9e46aa1">1.1. flask 学习过程中练手代码</a>
 <ul>
-<li><a href="#org44ffaba">1.1.1. mongodb 基本连接</a></li>
-<li><a href="#orgb88fb52">1.1.2. mySQL 连接</a></li>
+<li><a href="#org54af8be">1.1.1. mongodb 基本连接</a></li>
+<li><a href="#org820a7f7">1.1.2. mySQL 连接</a></li>
 </ul>
 </li>
-<li><a href="#org6ac71f5">1.2. python版本相关</a>
+<li><a href="#org0845cfb">1.2. python版本相关</a>
 <ul>
-<li><a href="#orgb0b3973">1.2.1. virtualenv 下指定python版本</a></li>
+<li><a href="#org86c0960">1.2.1. virtualenv 下指定python版本</a></li>
 </ul>
 </li>
-<li><a href="#org4de5027">1.3. scrapy初试</a>
+<li><a href="#org73ba222">1.3. scrapy初试</a>
 <ul>
-<li><a href="#orgcc561d9">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
-<li><a href="#org65af4d8">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
+<li><a href="#org9df4d59">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
+<li><a href="#org428d57a">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
+<li><a href="#org19c9fef">1.3.3. Restful Demo</a></li>
 </ul>
 </li>
 </ul>
@@ -27,17 +28,17 @@
 </div>
 </div>
 
-<a id="org8dc3b15"></a>
+<a id="orgc3f4fc7"></a>
 
 # Python 自学
 
 
-<a id="orgea0be60"></a>
+<a id="org9e46aa1"></a>
 
 ## flask 学习过程中练手代码
 
 
-<a id="org44ffaba"></a>
+<a id="org54af8be"></a>
 
 ### mongodb 基本连接
 
@@ -48,7 +49,7 @@
     代码:mongodb_test
 
 
-<a id="orgb88fb52"></a>
+<a id="org820a7f7"></a>
 
 ### mySQL 连接
 
@@ -76,12 +77,12 @@
         then login ok
 
 
-<a id="org6ac71f5"></a>
+<a id="org0845cfb"></a>
 
 ## python版本相关
 
 
-<a id="orgb0b3973"></a>
+<a id="org86c0960"></a>
 
 ### virtualenv 下指定python版本
 
@@ -90,12 +91,12 @@
     创建 venv
 
 
-<a id="org4de5027"></a>
+<a id="org73ba222"></a>
 
 ## scrapy初试
 
 
-<a id="orgcc561d9"></a>
+<a id="org9df4d59"></a>
 
 ### 简单的豆瓣网爬取:tutorial
 
@@ -105,11 +106,20 @@
         在项目主目录下执行
 
 
-<a id="org65af4d8"></a>
+<a id="org428d57a"></a>
 
 ### Meizi网站图片爬取：Meizitu
 
 1.  使用scrapy， python2.7, requests
 
         $ scrapy crawl meizi
+
+
+<a id="org19c9fef"></a>
+
+### Restful Demo
+
+1.  使用到：flask<sub>restful</sub>, reqparse, abort, Api, Resource
+
+    代码文件夹：restful 
 

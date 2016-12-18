@@ -54,3 +54,6 @@ $scrapy crawl dmoz
 #+BEGIN_EXAMPLE
 $ scrapy crawl meizi
 #+END_EXAMPLE
+*** Restful Demo
+**** 使用到：flask_restful, reqparse, abort, Api, Resource
+代码文件夹：restful 
