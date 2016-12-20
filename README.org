@@ -34,6 +34,17 @@ $ yourpassword
 then login ok
 
 #+END_SRC
+*** Restful Demo
+**** 使用到：flask_restful, reqparse, abort, Api, Resource
+代码文件夹：restful 
+*** 图片下载 Demo
+**** 使用到 request, send_from_directory, abort == 
+    #+BEGIN_EXAMPLE
+    文件夹:picture 
+    图片资源:picture/images/*.png
+    using this link  to download file http://localhost:5000/images/image2.png
+    #+END_EXAMPLE
+
 ** python版本相关
 *** virtualenv 下指定python版本
 #+BEGIN_EXAMPLE
@@ -54,6 +65,3 @@ $scrapy crawl dmoz
 #+BEGIN_EXAMPLE
 $ scrapy crawl meizi
 #+END_EXAMPLE
-*** Restful Demo
-**** 使用到：flask_restful, reqparse, abort, Api, Resource
-代码文件夹：restful 
