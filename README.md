@@ -2,25 +2,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline18">1. Python 自学</a>
+<li><a href="#orgheadline20">1. Python 自学</a>
 <ul>
-<li><a href="#orgheadline10">1.1. flask 学习过程中练手代码</a>
+<li><a href="#orgheadline12">1.1. flask 学习过程中练手代码</a>
 <ul>
 <li><a href="#orgheadline1">1.1.1. mongodb 基本连接</a></li>
 <li><a href="#orgheadline5">1.1.2. mySQL 连接</a></li>
 <li><a href="#orgheadline7">1.1.3. Restful Demo</a></li>
 <li><a href="#orgheadline9">1.1.4. 图片下载 Demo</a></li>
+<li><a href="#orgheadline11">1.1.5. 图片链接json格式返回</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline12">1.2. python版本相关</a>
+<li><a href="#orgheadline14">1.2. python版本相关</a>
 <ul>
-<li><a href="#orgheadline11">1.2.1. virtualenv 下指定python版本</a></li>
+<li><a href="#orgheadline13">1.2.1. virtualenv 下指定python版本</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline17">1.3. scrapy初试</a>
+<li><a href="#orgheadline19">1.3. scrapy初试</a>
 <ul>
-<li><a href="#orgheadline14">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
-<li><a href="#orgheadline16">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
+<li><a href="#orgheadline16">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
+<li><a href="#orgheadline18">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
 </ul>
 </li>
 </ul>
@@ -29,9 +30,9 @@
 </div>
 </div>
 
-# Python 自学<a id="orgheadline18"></a>
+# Python 自学<a id="orgheadline20"></a>
 
-## flask 学习过程中练手代码<a id="orgheadline10"></a>
+## flask 学习过程中练手代码<a id="orgheadline12"></a>
 
 ### mongodb 基本连接<a id="orgheadline1"></a>
 
@@ -80,24 +81,31 @@
         图片资源:picture/images/*.png
         using this link  to download file http://localhost:5000/images/image2.png
 
-## python版本相关<a id="orgheadline12"></a>
+### 图片链接json格式返回<a id="orgheadline11"></a>
 
-### virtualenv 下指定python版本<a id="orgheadline11"></a>
+1.  flask<sub>restful</sub>, send<sub>from</sub><sub>directory</sub> ==
+
+        代码文件夹：restful -> jsonrestful.py
+        图片资源: restful -> images/xxx.jpg ==
+
+## python版本相关<a id="orgheadline14"></a>
+
+### virtualenv 下指定python版本<a id="orgheadline13"></a>
 
     when create virtual environment, using shell command:
     $ virtualenv --python=python2.7 venv
     创建 venv
 
-## scrapy初试<a id="orgheadline17"></a>
+## scrapy初试<a id="orgheadline19"></a>
 
-### 简单的豆瓣网爬取:tutorial<a id="orgheadline14"></a>
+### 简单的豆瓣网爬取:tutorial<a id="orgheadline16"></a>
 
 1.  使用scrapy, python2.7
 
         $scrapy crawl dmoz  
         在项目主目录下执行
 
-### Meizi网站图片爬取：Meizitu<a id="orgheadline16"></a>
+### Meizi网站图片爬取：Meizitu<a id="orgheadline18"></a>
 
 1.  使用scrapy， python2.7, requests
 

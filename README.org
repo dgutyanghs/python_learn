@@ -45,6 +45,13 @@ then login ok
     using this link  to download file http://localhost:5000/images/image2.png
     #+END_EXAMPLE
 
+*** 图片链接json格式返回 
+**** flask_restful, send_from_directory ==
+#+BEGIN_EXAMPLE
+代码文件夹：restful -> jsonrestful.py
+图片资源: restful -> images/xxx.jpg ==
+#+END_EXAMPLE
+
 ** python版本相关
 *** virtualenv 下指定python版本
 #+BEGIN_EXAMPLE
