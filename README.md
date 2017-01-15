@@ -2,26 +2,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6c2a361">1. Python 自学</a>
+<li><a href="#org9bb4096">1. Python 自学</a>
 <ul>
-<li><a href="#org2634055">1.1. flask 学习过程中练手代码</a>
+<li><a href="#org1c6cf99">1.1. flask 学习过程中练手代码</a>
 <ul>
-<li><a href="#orgeab58d2">1.1.1. mongodb 基本连接</a></li>
-<li><a href="#orgd85fce1">1.1.2. mySQL 连接</a></li>
-<li><a href="#org3bc3d7f">1.1.3. Restful Demo</a></li>
-<li><a href="#org715e1dc">1.1.4. 图片下载 Demo</a></li>
-<li><a href="#org58d90a4">1.1.5. 图片链接json格式返回</a></li>
+<li><a href="#org8533fa4">1.1.1. mongodb 基本连接</a></li>
+<li><a href="#orgcbb59dc">1.1.2. mySQL 连接</a></li>
+<li><a href="#orga3cdaad">1.1.3. Restful Demo</a></li>
+<li><a href="#org1ea33d6">1.1.4. 图片下载 Demo</a></li>
+<li><a href="#org7382300">1.1.5. 图片链接json格式返回</a></li>
 </ul>
 </li>
-<li><a href="#org9902371">1.2. python版本相关</a>
+<li><a href="#orga390cdb">1.2. python版本相关</a>
 <ul>
-<li><a href="#org80e7821">1.2.1. virtualenv 下指定python版本</a></li>
+<li><a href="#org5cd6409">1.2.1. virtualenv 下指定python版本</a></li>
 </ul>
 </li>
-<li><a href="#org266ee12">1.3. scrapy初试</a>
+<li><a href="#org8cb2bac">1.3. scrapy初试</a>
 <ul>
-<li><a href="#orgbcb5720">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
-<li><a href="#orga78c55c">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
+<li><a href="#org9edbb1c">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
+<li><a href="#org88b642e">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
 </ul>
 </li>
 </ul>
@@ -30,17 +30,17 @@
 </div>
 </div>
 
-<a id="org6c2a361"></a>
+<a id="org9bb4096"></a>
 
 # Python 自学
 
 
-<a id="org2634055"></a>
+<a id="org1c6cf99"></a>
 
 ## flask 学习过程中练手代码
 
 
-<a id="orgeab58d2"></a>
+<a id="org8533fa4"></a>
 
 ### mongodb 基本连接
 
@@ -51,7 +51,7 @@
     代码:mongodb_test
 
 
-<a id="orgd85fce1"></a>
+<a id="orgcbb59dc"></a>
 
 ### mySQL 连接
 
@@ -81,7 +81,7 @@
     
     \#+END<sub>SR</sub>
 
-4.  mySQL 的ORM
+4.  mySQL 的ORM, json serialize
 
         mysql_test 目录下： app.py, manager.py, modules.py 
         >>>python manager save
@@ -89,7 +89,7 @@
         >>> python manager query_all
 
 
-<a id="org3bc3d7f"></a>
+<a id="orga3cdaad"></a>
 
 ### Restful Demo
 
@@ -98,7 +98,7 @@
     代码文件夹：restful 
 
 
-<a id="org715e1dc"></a>
+<a id="org1ea33d6"></a>
 
 ### 图片下载 Demo
 
@@ -109,7 +109,7 @@
         using this link  to download file http://localhost:5000/images/image2.png
 
 
-<a id="org58d90a4"></a>
+<a id="org7382300"></a>
 
 ### 图片链接json格式返回
 
@@ -119,12 +119,12 @@
         图片资源: restful -> images/xxx.jpg ==
 
 
-<a id="org9902371"></a>
+<a id="orga390cdb"></a>
 
 ## python版本相关
 
 
-<a id="org80e7821"></a>
+<a id="org5cd6409"></a>
 
 ### virtualenv 下指定python版本
 
@@ -133,12 +133,12 @@
     创建 venv
 
 
-<a id="org266ee12"></a>
+<a id="org8cb2bac"></a>
 
 ## scrapy初试
 
 
-<a id="orgbcb5720"></a>
+<a id="org9edbb1c"></a>
 
 ### 简单的豆瓣网爬取:tutorial
 
@@ -148,7 +148,7 @@
         在项目主目录下执行
 
 
-<a id="orga78c55c"></a>
+<a id="org88b642e"></a>
 
 ### Meizi网站图片爬取：Meizitu
 

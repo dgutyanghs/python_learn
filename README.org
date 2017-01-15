@@ -34,7 +34,7 @@ $ yourpassword
 then login ok
 
 #+END_SR
-***** mySQL 的ORM
+***** mySQL 的ORM, json serialize
       #+BEGIN_EXAMPLE
        mysql_test 目录下： app.py, manager.py, modules.py 
        >>>python manager save
