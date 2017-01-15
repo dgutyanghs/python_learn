@@ -33,7 +33,14 @@ $ yourpassword
 
 then login ok
 
-#+END_SRC
+#+END_SR
+***** mySQL 的ORM
+      #+BEGIN_EXAMPLE
+       mysql_test 目录下： app.py, manager.py, modules.py 
+       >>>python manager save
+       ...
+       >>> python manager query_all
+      #+END_EXAMPLE
 *** Restful Demo
 **** 使用到：flask_restful, reqparse, abort, Api, Resource
 代码文件夹：restful 
