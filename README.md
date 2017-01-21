@@ -2,26 +2,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9bb4096">1. Python 自学</a>
+<li><a href="#org127d051">1. Python 自学</a>
 <ul>
-<li><a href="#org1c6cf99">1.1. flask 学习过程中练手代码</a>
+<li><a href="#orgaa71ef6">1.1. flask 学习过程中练手代码</a>
 <ul>
-<li><a href="#org8533fa4">1.1.1. mongodb 基本连接</a></li>
-<li><a href="#orgcbb59dc">1.1.2. mySQL 连接</a></li>
-<li><a href="#orga3cdaad">1.1.3. Restful Demo</a></li>
-<li><a href="#org1ea33d6">1.1.4. 图片下载 Demo</a></li>
-<li><a href="#org7382300">1.1.5. 图片链接json格式返回</a></li>
+<li><a href="#org2efe018">1.1.1. mongodb 基本连接</a></li>
+<li><a href="#org8aaca1d">1.1.2. mySQL 连接</a></li>
+<li><a href="#org4babd15">1.1.3. Restful Demo</a></li>
+<li><a href="#org964211b">1.1.4. 图片下载 Demo</a></li>
+<li><a href="#org32d3022">1.1.5. 图片链接json格式返回</a></li>
 </ul>
 </li>
-<li><a href="#orga390cdb">1.2. python版本相关</a>
+<li><a href="#orgc330bd6">1.2. python版本相关</a>
 <ul>
-<li><a href="#org5cd6409">1.2.1. virtualenv 下指定python版本</a></li>
+<li><a href="#orgd67a8fe">1.2.1. virtualenv 下指定python版本</a></li>
 </ul>
 </li>
-<li><a href="#org8cb2bac">1.3. scrapy初试</a>
+<li><a href="#orgd782f9f">1.3. scrapy初试</a>
 <ul>
-<li><a href="#org9edbb1c">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
-<li><a href="#org88b642e">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
+<li><a href="#org16789ab">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
+<li><a href="#orgb985c98">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
 </ul>
 </li>
 </ul>
@@ -30,17 +30,17 @@
 </div>
 </div>
 
-<a id="org9bb4096"></a>
+<a id="org127d051"></a>
 
 # Python 自学
 
 
-<a id="org1c6cf99"></a>
+<a id="orgaa71ef6"></a>
 
 ## flask 学习过程中练手代码
 
 
-<a id="org8533fa4"></a>
+<a id="org2efe018"></a>
 
 ### mongodb 基本连接
 
@@ -51,7 +51,7 @@
     代码:mongodb_test
 
 
-<a id="orgcbb59dc"></a>
+<a id="org8aaca1d"></a>
 
 ### mySQL 连接
 
@@ -88,8 +88,14 @@
         ...
         >>> python manager query_all
 
+5.  MySQL 中文乱码的solution
 
-<a id="orga3cdaad"></a>
+        CREATE DATABASE mydb
+          DEFAULT CHARACTER SET utf8
+          DEFAULT COLLATE utf8_general_ci;
+
+
+<a id="org4babd15"></a>
 
 ### Restful Demo
 
@@ -98,7 +104,7 @@
     代码文件夹：restful 
 
 
-<a id="org1ea33d6"></a>
+<a id="org964211b"></a>
 
 ### 图片下载 Demo
 
@@ -109,7 +115,7 @@
         using this link  to download file http://localhost:5000/images/image2.png
 
 
-<a id="org7382300"></a>
+<a id="org32d3022"></a>
 
 ### 图片链接json格式返回
 
@@ -119,12 +125,12 @@
         图片资源: restful -> images/xxx.jpg ==
 
 
-<a id="orga390cdb"></a>
+<a id="orgc330bd6"></a>
 
 ## python版本相关
 
 
-<a id="org5cd6409"></a>
+<a id="orgd67a8fe"></a>
 
 ### virtualenv 下指定python版本
 
@@ -133,12 +139,12 @@
     创建 venv
 
 
-<a id="org8cb2bac"></a>
+<a id="orgd782f9f"></a>
 
 ## scrapy初试
 
 
-<a id="org9edbb1c"></a>
+<a id="org16789ab"></a>
 
 ### 简单的豆瓣网爬取:tutorial
 
@@ -148,7 +154,7 @@
         在项目主目录下执行
 
 
-<a id="org88b642e"></a>
+<a id="orgb985c98"></a>
 
 ### Meizi网站图片爬取：Meizitu
 
