@@ -23,7 +23,8 @@ if have password , then enter....
 
 #+END_EXAMPLE
 ***** Change MySQL password
-#+BEGIN_SRC sql
+#+BEGIN_EXAMPLE
+
 mysql> SET PASSWORD FOR 'tom'@'localhost' = PASSWORD('foobar');
 mysql> FLUSH PRIVILEGES;
 mysql> quit;
@@ -33,7 +34,7 @@ $ yourpassword
 
 then login ok
 
-#+END_SRC
+#+END_EXAMPLE
 *** Restful Demo
 **** 使用到：flask_restful, reqparse, abort, Api, Resource
 代码文件夹：restful 
@@ -52,6 +53,10 @@ then login ok
 图片资源: restful -> images/xxx.jpg ==
 #+END_EXAMPLE
 
+**** WSGI服务器Gunicorn 启动app 命令
+#+BEGIN_EXAMPLE
+$gunicorn -b 0.0.0.0:8080 yourapp:app
+#+END_EXAMPLE
 ** python版本相关
 *** virtualenv 下指定python版本
 #+BEGIN_EXAMPLE
