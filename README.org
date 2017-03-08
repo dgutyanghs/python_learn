@@ -35,6 +35,20 @@ $ yourpassword
 then login ok
 
 #+END_EXAMPLE
+***** mySQL 的ORM, json serialize
+      #+BEGIN_EXAMPLE
+       mysql_test 目录下： app.py, manager.py, modules.py 
+       >>>python manager save
+       ...
+       >>> python manager query_all
+      #+END_EXAMPLE
+***** MySQL 中文乱码的solution
+#+BEGIN_EXAMPLE
+
+CREATE DATABASE mydb
+  DEFAULT CHARACTER SET utf8
+  DEFAULT COLLATE utf8_general_ci;
+#+END_EXAMPLE
 *** Restful Demo
 **** 使用到：flask_restful, reqparse, abort, Api, Resource
 代码文件夹：restful 
