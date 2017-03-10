@@ -2,26 +2,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgheadline23">1. Python 自学</a>
+<li><a href="#orgeaa0139">1. Python 自学</a>
 <ul>
-<li><a href="#orgheadline15">1.1. flask 学习过程中练手代码</a>
+<li><a href="#org63615b7">1.1. flask 学习过程中练手代码</a>
 <ul>
-<li><a href="#orgheadline1">1.1.1. mongodb 基本连接</a></li>
-<li><a href="#orgheadline7">1.1.2. mySQL 连接</a></li>
-<li><a href="#orgheadline9">1.1.3. Restful Demo</a></li>
-<li><a href="#orgheadline11">1.1.4. 图片下载 Demo</a></li>
-<li><a href="#orgheadline14">1.1.5. 图片链接json格式返回</a></li>
+<li><a href="#org8366742">1.1.1. mongodb 基本连接</a></li>
+<li><a href="#orgf9c686e">1.1.2. mySQL 连接</a></li>
+<li><a href="#org05c95ac">1.1.3. Restful Demo</a></li>
+<li><a href="#orgfeb99da">1.1.4. 图片下载 Demo</a></li>
+<li><a href="#orga4f3ee4">1.1.5. 图片链接json格式返回</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline17">1.2. python版本相关</a>
+<li><a href="#orgba4feff">1.2. python版本相关</a>
 <ul>
-<li><a href="#orgheadline16">1.2.1. virtualenv 下指定python版本</a></li>
+<li><a href="#orgfd809fc">1.2.1. virtualenv 下指定python版本</a></li>
 </ul>
 </li>
-<li><a href="#orgheadline22">1.3. scrapy初试</a>
+<li><a href="#orga3407e4">1.3. scrapy初试</a>
 <ul>
-<li><a href="#orgheadline19">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
-<li><a href="#orgheadline21">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
+<li><a href="#org9779e4b">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
+<li><a href="#orgb315f69">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
 </ul>
 </li>
 </ul>
@@ -30,11 +30,19 @@
 </div>
 </div>
 
-# Python 自学<a id="orgheadline23"></a>
+<a id="orgeaa0139"></a>
 
-## flask 学习过程中练手代码<a id="orgheadline15"></a>
+# Python 自学
 
-### mongodb 基本连接<a id="orgheadline1"></a>
+
+<a id="org63615b7"></a>
+
+## flask 学习过程中练手代码
+
+
+<a id="org8366742"></a>
+
+### mongodb 基本连接
 
     运行环境: python3.5
     代码文件夹:mongodb_test  
@@ -42,7 +50,10 @@
     lib2(使用ORM): flask_mongoengine, flask_script
     代码:mongodb_test
 
-### mySQL 连接<a id="orgheadline7"></a>
+
+<a id="orgf9c686e"></a>
+
+### mySQL 连接
 
 1.  mySQL 服务器启动命令
 
@@ -80,13 +91,19 @@
           DEFAULT CHARACTER SET utf8
           DEFAULT COLLATE utf8_general_ci;
 
-### Restful Demo<a id="orgheadline9"></a>
+
+<a id="org05c95ac"></a>
+
+### Restful Demo
 
 1.  使用到：flask<sub>restful</sub>, reqparse, abort, Api, Resource
 
     代码文件夹：restful 
 
-### 图片下载 Demo<a id="orgheadline11"></a>
+
+<a id="orgfeb99da"></a>
+
+### 图片下载 Demo
 
 1.  使用到 request, send<sub>from</sub><sub>directory</sub>, abort ==
 
@@ -94,7 +111,10 @@
         图片资源:picture/images/*.png
         using this link  to download file http://localhost:5000/images/image2.png
 
-### 图片链接json格式返回<a id="orgheadline14"></a>
+
+<a id="orga4f3ee4"></a>
+
+### 图片链接json格式返回
 
 1.  flask<sub>restful</sub>, send<sub>from</sub><sub>directory</sub> ==
 
@@ -105,25 +125,45 @@
 
         $gunicorn -b 0.0.0.0:8080 yourapp:app
 
-## python版本相关<a id="orgheadline17"></a>
+3.  flask返回HTML5的视频
 
-### virtualenv 下指定python版本<a id="orgheadline16"></a>
+        Browser未能正常播放
+
+
+<a id="orgba4feff"></a>
+
+## python版本相关
+
+
+<a id="orgfd809fc"></a>
+
+### virtualenv 下指定python版本
 
     when create virtual environment, using shell command:
     $ virtualenv --python=python2.7 venv
     创建 venv
 
-## scrapy初试<a id="orgheadline22"></a>
 
-### 简单的豆瓣网爬取:tutorial<a id="orgheadline19"></a>
+<a id="orga3407e4"></a>
+
+## scrapy初试
+
+
+<a id="org9779e4b"></a>
+
+### 简单的豆瓣网爬取:tutorial
 
 1.  使用scrapy, python2.7
 
         $scrapy crawl dmoz  
         在项目主目录下执行
 
-### Meizi网站图片爬取：Meizitu<a id="orgheadline21"></a>
+
+<a id="orgb315f69"></a>
+
+### Meizi网站图片爬取：Meizitu
 
 1.  使用scrapy， python2.7, requests
 
         $ scrapy crawl meizi
+

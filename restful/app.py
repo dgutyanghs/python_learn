@@ -1,6 +1,6 @@
 # encoding utf-8 
 
-from flask import  Flask, request , abort, Response, jsonify
+from flask import  Flask, request , abort, Response, jsonify, render_template
 from flask_restful import Resource, Api, reqparse
 from flask import send_from_directory
 import os
@@ -42,7 +42,21 @@ class Download(Resource):
 
 api.add_resource(Download, '/images/<string:imageid>')
 
+# parser.add_argument('videoid')
+# class Videoplay(Resource):
+#     def get(self, videoid):
+#         if os.path.isfile(os.path.join('videos/', videoid)):
+#             return render_template('video.html')
+#         abort(404)
 
+# api.add_resource(Videoplay, '/videos/<string:videoid>')
+
+
+@app.route('/videos/<videoid>')
+def videohtml(videoid=None):
+    if os.path.isfile(os.path.join('videos/', videoid)):
+        return render_template('video.html')
+    abort(404)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)

@@ -71,6 +71,10 @@ CREATE DATABASE mydb
 #+BEGIN_EXAMPLE
 $gunicorn -b 0.0.0.0:8080 yourapp:app
 #+END_EXAMPLE
+**** flask返回HTML5的视频
+#+BEGIN_EXAMPLE
+Browser未能正常播放
+#+END_EXAMPLE
 ** python版本相关
 *** virtualenv 下指定python版本
 #+BEGIN_EXAMPLE
