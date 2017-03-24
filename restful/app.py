@@ -52,6 +52,8 @@ api.add_resource(Download, '/images/<string:imageid>')
 # api.add_resource(Videoplay, '/videos/<string:videoid>')
 
 
+
+
 @app.route('/videos/<videoid>')
 def videohtml(videoid=None):
     if os.path.isfile(os.path.join('videos/', videoid)):
@@ -59,7 +61,7 @@ def videohtml(videoid=None):
     abort(404)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=8081)
 
 
 

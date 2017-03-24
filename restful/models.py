@@ -29,4 +29,35 @@ class Pianonews(db.Model):
 
 
 
+class Videoslist(db.model):
+    index = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String)
+    cover = db.Column(db.String)
+    mp4_url = db.Column(db.String)
+    desc = db.Column(db.String)
+
+    
+    def __init__ (self, index, title, cover, mp4_url, desc):
+        self.index = index
+        self.title = title
+        self.cover = cover
+        self.mp4_url = mp4_url
+
+
+    def __repr__ (self):
+        return "index:{} title:{} cover:{} mp4_url:{} desc:{}".format(self.index, self.title, self.cover, self.mp4_url, self.desc)
+
+    @property
+    def serialize(self):
+        return {
+            'index': self.index,
+            'title': self.title,
+            'cover': self.cover,
+            'mp4_url':self.mp4_url,
+            'desc':self.desc
+        }
+
+    @property
+    def serialize_many2many(self):
+        return [item.serialize for item in self.many2many]
 
