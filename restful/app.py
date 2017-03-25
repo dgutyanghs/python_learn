@@ -51,6 +51,13 @@ api.add_resource(Download, '/images/<string:imageid>')
 
 # api.add_resource(Videoplay, '/videos/<string:videoid>')
 
+class VideoInfo(Resource):
+    def post(self):
+        from models import Videoslist
+        return jsonify(videoslist = [item.serialize for item in Videoslist.query.all()]) 
+
+
+api.add_resource(VideoInfo, '/videoinfo')
 
 
 

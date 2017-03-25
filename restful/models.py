@@ -29,7 +29,7 @@ class Pianonews(db.Model):
 
 
 
-class Videoslist(db.model):
+class Videoslist(db.Model):
     index = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String)
     cover = db.Column(db.String)
@@ -42,6 +42,8 @@ class Videoslist(db.model):
         self.title = title
         self.cover = cover
         self.mp4_url = mp4_url
+        self.desc = desc
+         
 
 
     def __repr__ (self):
