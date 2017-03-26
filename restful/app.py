@@ -42,14 +42,6 @@ class Download(Resource):
 
 api.add_resource(Download, '/images/<string:imageid>')
 
-# parser.add_argument('videoid')
-# class Videoplay(Resource):
-#     def get(self, videoid):
-#         if os.path.isfile(os.path.join('videos/', videoid)):
-#             return render_template('video.html')
-#         abort(404)
-
-# api.add_resource(Videoplay, '/videos/<string:videoid>')
 
 class VideoInfo(Resource):
     def post(self):
