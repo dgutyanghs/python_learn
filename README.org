@@ -49,6 +49,20 @@ CREATE DATABASE mydb
   DEFAULT CHARACTER SET utf8
   DEFAULT COLLATE utf8_general_ci;
 #+END_EXAMPLE
+***** SqlAlchemy query 结果排序 desc
+#+BEGIN_SRC python
+class Hotnews(Resource):
+    def get(self):
+        from models import Pianonews
+        return jsonify(pianonews = [item.serialize for item in Pianonews.query.order_by(desc(Pianonews.index))])
+        #return jsonify(pianonews = [item.serialize for item in Pianonews.query.all()]) 
+
+
+    def post(self):
+        from models import Pianonews
+        return jsonify(pianonews = [item.serialize for item in Pianonews.query.all()])
+#+END_SRC
+见 restful app.py文件
 *** Restful Demo
 **** 使用到：flask_restful, reqparse, abort, Api, Resource
 代码文件夹：restful 
