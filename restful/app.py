@@ -6,6 +6,7 @@ from flask import send_from_directory
 import os
 import json
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import desc
 
 
 app = Flask(__name__)
@@ -19,11 +20,12 @@ db = SQLAlchemy(app)
 class Hotnews(Resource):
     def get(self):
         from models import Pianonews
-        return jsonify(pianonews = [item.serialize for item in Pianonews.query.all()]) 
+        return jsonify(pianonews = [item.serialize for item in Pianonews.query.order_by(desc(Pianonews.index))]) 
         
 
     def post(self):
         from models import Pianonews
+        # return jsonify(pianonews = [item.serialize for item in Pianonews.query.order_by(desc(Pianonews.index))]) 
         return jsonify(pianonews = [item.serialize for item in Pianonews.query.all()]) 
 
 
@@ -46,7 +48,8 @@ api.add_resource(Download, '/images/<string:imageid>')
 class VideoInfo(Resource):
     def post(self):
         from models import Videoslist
-        return jsonify(videoslist = [item.serialize for item in Videoslist.query.all()]) 
+        return jsonify(videoslist = [item.serialize for item in Videoslist.query.order_by(desc(Videoslist.index))]) 
+        # return jsonify(videoslist = [item.serialize for item in Videoslist.query.all()]) 
 
 
 api.add_resource(VideoInfo, '/videoinfo')
