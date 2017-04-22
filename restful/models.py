@@ -5,7 +5,7 @@ class Pianonews(db.Model):
     index = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String)
     icon = db.Column(db.String)
-
+    
     def __init__ (self, index, title, icon):
         self.index = index
         self.title = title
@@ -30,14 +30,15 @@ class Pianonews(db.Model):
 
 
 class Videoslist(db.Model):
-    index = db.Column(db.Integer, primary_key=True)
+    index = db.Column(db.Integer, primary_key=True, autoincrement = True)
     title = db.Column(db.String)
     cover = db.Column(db.String)
     mp4_url = db.Column(db.String)
     desc = db.Column(db.String)
 
     
-    def __init__ (self, index, title, cover, mp4_url, desc):
+    def __init__ (self, title, cover, mp4_url, desc, index = None):
+    # def __init__ (self, index, title, cover, mp4_url, desc):
         self.index = index
         self.title = title
         self.cover = cover
