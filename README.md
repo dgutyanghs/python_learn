@@ -2,26 +2,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org072b755">1. Python 自学</a>
+<li><a href="#org83d8044">1. Python 自学</a>
 <ul>
-<li><a href="#org8f55f7d">1.1. flask 学习过程中练手代码</a>
+<li><a href="#orgf30f68f">1.1. flask 学习过程中练手代码</a>
 <ul>
-<li><a href="#org188b9be">1.1.1. mongodb 基本连接</a></li>
-<li><a href="#org5c56c9e">1.1.2. mySQL 连接</a></li>
-<li><a href="#orgea00c25">1.1.3. Restful Demo</a></li>
-<li><a href="#org90e4cca">1.1.4. 图片下载 Demo</a></li>
-<li><a href="#orgb1ff41a">1.1.5. 图片链接json格式返回</a></li>
+<li><a href="#orge6e6081">1.1.1. mongodb 基本连接</a></li>
+<li><a href="#orge411f68">1.1.2. mySQL 连接</a></li>
+<li><a href="#org26c85b8">1.1.3. Restful Demo</a></li>
+<li><a href="#orge2ee502">1.1.4. 图片下载 Demo</a></li>
+<li><a href="#org50c5b7c">1.1.5. 图片链接json格式返回</a></li>
 </ul>
 </li>
-<li><a href="#org01fd05e">1.2. python版本相关</a>
+<li><a href="#org7e7fa27">1.2. python版本相关</a>
 <ul>
-<li><a href="#orgb3f92b5">1.2.1. virtualenv 下指定python版本</a></li>
+<li><a href="#orgcca98a6">1.2.1. virtualenv 下指定python版本</a></li>
 </ul>
 </li>
-<li><a href="#orge27b7ec">1.3. scrapy初试</a>
+<li><a href="#org08ca8ed">1.3. scrapy初试</a>
 <ul>
-<li><a href="#org6f6a32d">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
-<li><a href="#orgf60a233">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
+<li><a href="#org3e4149b">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
+<li><a href="#orgb980f07">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
 </ul>
 </li>
 </ul>
@@ -30,17 +30,17 @@
 </div>
 </div>
 
-<a id="org072b755"></a>
+<a id="org83d8044"></a>
 
 # Python 自学
 
 
-<a id="org8f55f7d"></a>
+<a id="orgf30f68f"></a>
 
 ## flask 学习过程中练手代码
 
 
-<a id="org188b9be"></a>
+<a id="orge6e6081"></a>
 
 ### mongodb 基本连接
 
@@ -51,7 +51,7 @@
     代码:mongodb_test
 
 
-<a id="org5c56c9e"></a>
+<a id="orge411f68"></a>
 
 ### mySQL 连接
 
@@ -106,8 +106,13 @@
     
     见 restful app.py文件
 
+7.  Mysql 更改表的Auto increment
 
-<a id="orgea00c25"></a>
+        ALTER TABLE `videoslist` CHANGE COLUMN `index` `index` INT(4) NOT NULL AUTO_INCREMENT;
+        注意` ` 不是' '号
+
+
+<a id="org26c85b8"></a>
 
 ### Restful Demo
 
@@ -116,7 +121,7 @@
     代码文件夹：restful 
 
 
-<a id="org90e4cca"></a>
+<a id="orge2ee502"></a>
 
 ### 图片下载 Demo
 
@@ -127,7 +132,7 @@
         using this link  to download file http://localhost:5000/images/image2.png
 
 
-<a id="orgb1ff41a"></a>
+<a id="org50c5b7c"></a>
 
 ### 图片链接json格式返回
 
@@ -145,12 +150,12 @@
         Browser未能正常播放
 
 
-<a id="org01fd05e"></a>
+<a id="org7e7fa27"></a>
 
 ## python版本相关
 
 
-<a id="orgb3f92b5"></a>
+<a id="orgcca98a6"></a>
 
 ### virtualenv 下指定python版本
 
@@ -159,12 +164,12 @@
     创建 venv
 
 
-<a id="orge27b7ec"></a>
+<a id="org08ca8ed"></a>
 
 ## scrapy初试
 
 
-<a id="org6f6a32d"></a>
+<a id="org3e4149b"></a>
 
 ### 简单的豆瓣网爬取:tutorial
 
@@ -174,7 +179,7 @@
         在项目主目录下执行
 
 
-<a id="orgf60a233"></a>
+<a id="orgb980f07"></a>
 
 ### Meizi网站图片爬取：Meizitu
 

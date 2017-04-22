@@ -27,8 +27,8 @@ def call():
     cmd5 = "time ffmpeg -ss {timecut} -i {name} -f image2 -y {picture}.jpg".format(timecut = timejpg, name = filename, picture = mainname)
     # cmd5 = "time ffmpeg -ss 00:00:49 -i {name} -f image2 -y {picture}.jpg".format(name = filename, picture = mainname)
 
-    os.system(cmd4)
     os.system(cmd5)
+    os.system(cmd4)
 
 # call()
 

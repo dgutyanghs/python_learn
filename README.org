@@ -63,6 +63,11 @@ class Hotnews(Resource):
         return jsonify(pianonews = [item.serialize for item in Pianonews.query.all()])
 #+END_SRC
 见 restful app.py文件
+***** Mysql 更改表的Auto increment
+#+BEGIN_SRC sql 
+ALTER TABLE `videoslist` CHANGE COLUMN `index` `index` INT(4) NOT NULL AUTO_INCREMENT;
+注意` ` 不是' '号
+#+END_SRC
 *** Restful Demo
 **** 使用到：flask_restful, reqparse, abort, Api, Resource
 代码文件夹：restful 
