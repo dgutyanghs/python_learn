@@ -65,7 +65,10 @@ class Hotnews(Resource):
 见 restful app.py文件
 ***** Mysql 更改表的Auto increment
 #+BEGIN_SRC sql 
-ALTER TABLE `videoslist` CHANGE COLUMN `index` `index` INT(4) NOT NULL AUTO_INCREMENT;
+> ALTER TABLE `videoslist` CHANGE COLUMN `index` `index` INT(4) NOT NULL AUTO_INCREMENT;
+
+or
+> ALTER TABLE  `videoslist` ADD  `index` INT( 11 ) NOT NULL  PRIMARY KEY AUTO_INCREMENT FIRST
 注意` ` 不是' '号
 #+END_SRC
 *** Restful Demo

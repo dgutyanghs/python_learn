@@ -2,26 +2,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org83d8044">1. Python 自学</a>
+<li><a href="#org86aa045">1. Python 自学</a>
 <ul>
-<li><a href="#orgf30f68f">1.1. flask 学习过程中练手代码</a>
+<li><a href="#orge01ef35">1.1. flask 学习过程中练手代码</a>
 <ul>
-<li><a href="#orge6e6081">1.1.1. mongodb 基本连接</a></li>
-<li><a href="#orge411f68">1.1.2. mySQL 连接</a></li>
-<li><a href="#org26c85b8">1.1.3. Restful Demo</a></li>
-<li><a href="#orge2ee502">1.1.4. 图片下载 Demo</a></li>
-<li><a href="#org50c5b7c">1.1.5. 图片链接json格式返回</a></li>
+<li><a href="#org781d415">1.1.1. mongodb 基本连接</a></li>
+<li><a href="#org8187295">1.1.2. mySQL 连接</a></li>
+<li><a href="#org4cc6d1e">1.1.3. Restful Demo</a></li>
+<li><a href="#org2313dc3">1.1.4. 图片下载 Demo</a></li>
+<li><a href="#org7efcb94">1.1.5. 图片链接json格式返回</a></li>
 </ul>
 </li>
-<li><a href="#org7e7fa27">1.2. python版本相关</a>
+<li><a href="#orga4a5dfe">1.2. python版本相关</a>
 <ul>
-<li><a href="#orgcca98a6">1.2.1. virtualenv 下指定python版本</a></li>
+<li><a href="#org3f4564c">1.2.1. virtualenv 下指定python版本</a></li>
 </ul>
 </li>
-<li><a href="#org08ca8ed">1.3. scrapy初试</a>
+<li><a href="#orgb54339c">1.3. scrapy初试</a>
 <ul>
-<li><a href="#org3e4149b">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
-<li><a href="#orgb980f07">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
+<li><a href="#orgc9840d3">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
+<li><a href="#org8b17cc9">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
 </ul>
 </li>
 </ul>
@@ -30,17 +30,17 @@
 </div>
 </div>
 
-<a id="org83d8044"></a>
+<a id="org86aa045"></a>
 
 # Python 自学
 
 
-<a id="orgf30f68f"></a>
+<a id="orge01ef35"></a>
 
 ## flask 学习过程中练手代码
 
 
-<a id="orge6e6081"></a>
+<a id="org781d415"></a>
 
 ### mongodb 基本连接
 
@@ -51,7 +51,7 @@
     代码:mongodb_test
 
 
-<a id="orge411f68"></a>
+<a id="org8187295"></a>
 
 ### mySQL 连接
 
@@ -108,11 +108,14 @@
 
 7.  Mysql 更改表的Auto increment
 
-        ALTER TABLE `videoslist` CHANGE COLUMN `index` `index` INT(4) NOT NULL AUTO_INCREMENT;
+        > ALTER TABLE `videoslist` CHANGE COLUMN `index` `index` INT(4) NOT NULL AUTO_INCREMENT;
+        
+        or
+        > ALTER TABLE  `videoslist` ADD  `index` INT( 11 ) NOT NULL  PRIMARY KEY AUTO_INCREMENT FIRST
         注意` ` 不是' '号
 
 
-<a id="org26c85b8"></a>
+<a id="org4cc6d1e"></a>
 
 ### Restful Demo
 
@@ -121,7 +124,7 @@
     代码文件夹：restful 
 
 
-<a id="orge2ee502"></a>
+<a id="org2313dc3"></a>
 
 ### 图片下载 Demo
 
@@ -132,7 +135,7 @@
         using this link  to download file http://localhost:5000/images/image2.png
 
 
-<a id="org50c5b7c"></a>
+<a id="org7efcb94"></a>
 
 ### 图片链接json格式返回
 
@@ -150,12 +153,12 @@
         Browser未能正常播放
 
 
-<a id="org7e7fa27"></a>
+<a id="orga4a5dfe"></a>
 
 ## python版本相关
 
 
-<a id="orgcca98a6"></a>
+<a id="org3f4564c"></a>
 
 ### virtualenv 下指定python版本
 
@@ -164,12 +167,12 @@
     创建 venv
 
 
-<a id="org08ca8ed"></a>
+<a id="orgb54339c"></a>
 
 ## scrapy初试
 
 
-<a id="org3e4149b"></a>
+<a id="orgc9840d3"></a>
 
 ### 简单的豆瓣网爬取:tutorial
 
@@ -179,7 +182,7 @@
         在项目主目录下执行
 
 
-<a id="orgb980f07"></a>
+<a id="org8b17cc9"></a>
 
 ### Meizi网站图片爬取：Meizitu
 
