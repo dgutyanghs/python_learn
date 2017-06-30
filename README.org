@@ -71,6 +71,10 @@ or
 > ALTER TABLE  `videoslist` ADD  `index` INT( 11 ) NOT NULL  PRIMARY KEY AUTO_INCREMENT FIRST
 注意` ` 不是' '号
 #+END_SRC
+***** MySQL 的table名字区分大小写
+#+BEGIN_SRC sql 
+$: RENAME TABLE old_table TO new_table;
+#+END_SRC
 *** Restful Demo
 **** 使用到：flask_restful, reqparse, abort, Api, Resource
 代码文件夹：restful 
