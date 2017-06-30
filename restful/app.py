@@ -67,7 +67,7 @@ def videohtml(videoid=None):
 class FlashmobInfo(Resource):
     def post(self):
         from models import Flashmoblist
-        return jsonify(videoslist = [item.serialize for item in Videoslist.query.order_by(desc(Videoslist.index))]) 
+        return jsonify(flashmobinfolist = [item.serialize for item in Flashmoblist.query.order_by(desc(Flashmoblist.index))]) 
         # return jsonify(videoslist = [item.serialize for item in Videoslist.query.all()]) 
 
 api.add_resource(FlashmobInfo, '/flashmobinfo')
