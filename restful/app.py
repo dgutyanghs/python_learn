@@ -62,6 +62,18 @@ def videohtml(videoid=None):
         return render_template('video.html')
     abort(404)
 
+
+
+class FlashmobInfo(Resource):
+    def post(self):
+        from models import Flashmoblist
+        return jsonify(videoslist = [item.serialize for item in Videoslist.query.order_by(desc(Videoslist.index))]) 
+        # return jsonify(videoslist = [item.serialize for item in Videoslist.query.all()]) 
+
+api.add_resource(FlashmobInfo, '/flashmobinfo')
+
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8081)
 

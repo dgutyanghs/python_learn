@@ -44,12 +44,25 @@ def query_videos():
 
 @manager.command
 def save_flashmob():
-    # item = Flashmoblist('布基上校进行曲','http://120.25.207.78:8080/vod/Colonel Bogey.jpg', 'http://120.25.207.78:8080/vod/Colonel Bogey.mp4', '《布基上校进行曲》（英语：Colonel Bogey March）为有“英国进行曲之王”（The British March King）之称的军官作曲家肯尼斯·约瑟夫·阿尔福特（Kenneth Joseph Alford）[1]创作于1914年，后来于1957年被电影《桂河大桥》采用并改编为电影主题曲《桂河进行曲》（The River Kwai March），此曲也随着该部电影的成功而广为世人所熟悉。')
+     item = Flashmoblist('布基上校进行曲',
+                         'http://120.25.207.78:8080/vod/Colonel Bogey.jpg',
+                         'http://120.25.207.78:8080/vod/Colonel Bogey.mp4',
+                         '《布基上校进行曲》（英语：Colonel Bogey March）为有英国进行曲之王\
+                         （The British March King）之称的军官作曲家肯尼斯·约瑟夫·阿尔福特 \
+                         （Kenneth Joseph Alford）[1]创作于1914年，后来于1957年被电影《桂河大桥》\
+                         采用并改编为电影主题曲《桂河进行曲》（The River Kwai March），\
+                         此曲也随着该部电影的成功而广为世人所熟悉。')
 
-    item2 = Flashmoblist('魔笛 女高音花腔','http://120.25.207.78:8080/vod/Magic Flute.jpg', 'http://120.25.207.78:8080/vod/Magic Flute.mp4', '《仇恨的火焰(Der Hölle Rache)》是一首极为华丽的花腔咏叹调，可以说是花腔女高音咏叹调史上数一数二的名曲')
-    # db.session.add(item)
-    db.session.add(item2)
-    db.session.commit()
+     db.session.add(item)
+
+     item2 = Flashmoblist('魔笛 女高音花腔',
+                         'http://120.25.207.78:8080/vod/Magic Flute.jpg',
+                         'http://120.25.207.78:8080/vod/Magic Flute.mp4',
+                         '《仇恨的火焰(Der Hölle Rache)》是一首极为华丽的花腔咏叹调，\
+                         可以说是花腔女高音咏叹调史上数一数二的名曲')
+
+     db.session.add(item2)
+     db.session.commit()
 
 @manager.command
 def query_flashmob():
