@@ -45,8 +45,8 @@ def query_videos():
 @manager.command
 def save_flashmob():
      item = Flashmoblist('布基上校进行曲',
-                         'http://120.25.207.78:8080/vod/Colonel Bogey.jpg',
-                         'http://120.25.207.78:8080/vod/Colonel Bogey.mp4',
+                         'http://120.25.207.78:8080/vod/ColonelBogey.jpg',
+                         'http://120.25.207.78:8080/vod/ColonelBogey.mp4',
                          '《布基上校进行曲》（英语：Colonel Bogey March）为有英国进行曲之王\
                          （The British March King）之称的军官作曲家肯尼斯·约瑟夫·阿尔福特 \
                          （Kenneth Joseph Alford）[1]创作于1914年，后来于1957年被电影《桂河大桥》\
@@ -56,8 +56,8 @@ def save_flashmob():
      db.session.add(item)
 
      item2 = Flashmoblist('魔笛 女高音花腔',
-                         'http://120.25.207.78:8080/vod/Magic Flute.jpg',
-                         'http://120.25.207.78:8080/vod/Magic Flute.mp4',
+                         'http://120.25.207.78:8080/vod/MagicFlute.jpg',
+                         'http://120.25.207.78:8080/vod/MagicFlute.mp4',
                          '《仇恨的火焰(Der Hölle Rache)》是一首极为华丽的花腔咏叹调，\
                          可以说是花腔女高音咏叹调史上数一数二的名曲')
 
