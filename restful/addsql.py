@@ -44,24 +44,30 @@ def query_videos():
 
 @manager.command
 def save_flashmob():
-     item = Flashmoblist('布基上校进行曲',
-                         'http://120.25.207.78:8080/vod/ColonelBogey.jpg',
-                         'http://120.25.207.78:8080/vod/ColonelBogey.mp4',
-                         '《布基上校进行曲》（英语：Colonel Bogey March）为有英国进行曲之王\
-                         （The British March King）之称的军官作曲家肯尼斯·约瑟夫·阿尔福特 \
-                         （Kenneth Joseph Alford）[1]创作于1914年，后来于1957年被电影《桂河大桥》\
-                         采用并改编为电影主题曲《桂河进行曲》（The River Kwai March），\
-                         此曲也随着该部电影的成功而广为世人所熟悉。')
+     item = Flashmoblist('歌德堡变奏曲第1变奏',
+                         'http://120.25.207.78:8080/vod/goldbergVar1.jpg',
+                         'http://120.25.207.78:8080/vod/goldbergVar1.mp4',
+                         '哥德堡变奏被视为巴赫作品中最重要的变奏曲之一, \
+                         1955年加拿大钢琴家格伦·古尔德将其选作自己的第一张录音作品。')
 
      db.session.add(item)
 
-     item2 = Flashmoblist('魔笛 女高音花腔',
-                         'http://120.25.207.78:8080/vod/MagicFlute.jpg',
-                         'http://120.25.207.78:8080/vod/MagicFlute.mp4',
-                         '《仇恨的火焰(Der Hölle Rache)》是一首极为华丽的花腔咏叹调，\
-                         可以说是花腔女高音咏叹调史上数一数二的名曲')
+     item2 = Flashmoblist('饮酒歌"茶花女"',
+                         'http://120.25.207.78:8080/vod/laTraviata.jpg',
+                         'http://120.25.207.78:8080/vod/laTraviata.3gp',
+                         '作于1853年。为所作的歌剧《茶花女》中第一幕唱段。\
+                         当时男主角阿尔弗雷多在女主人公薇奥莱塔举行的宴会中举杯祝贺，\
+                         用歌声表达对薇奥莱塔的爱慕之心，薇奥莱塔也在祝酒时作了巧妙回答。')
 
      db.session.add(item2)
+
+
+     item3 = Flashmoblist('欢乐颂',
+                         'http://120.25.207.78:8080/vod/Odetojoy.jpg',
+                         'http://120.25.207.78:8080/vod/Odetojoy.3gp',
+                         '该作品是古典音乐中最为人所熟知的作品之一，亦属于贝多芬最杰出的作品。')
+
+     db.session.add(item3)
      db.session.commit()
 
 @manager.command
