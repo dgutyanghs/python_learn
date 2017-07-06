@@ -44,17 +44,22 @@ def query_videos():
 
 @manager.command
 def save_flashmob():
-     item = Flashmoblist('歌德堡变奏曲第1变奏',
-                         'http://120.25.207.78:8080/vod/goldbergVar1.jpg',
-                         'http://120.25.207.78:8080/vod/goldbergVar1.mp4',
-                         '哥德堡变奏被视为巴赫作品中最重要的变奏曲之一, \
-                         1955年加拿大钢琴家格伦·古尔德将其选作自己的第一张录音作品。')
+     # item = Flashmoblist('歌德堡变奏曲第1变奏',
+     #                     'http://120.25.207.78:8080/vod/goldbergVar1.jpg',
+     #                     'http://120.25.207.78:8080/vod/goldbergVar1.mp4',
+     #                     '哥德堡变奏被视为巴赫作品中最重要的变奏曲之一, \
+     #                     1955年加拿大钢琴家格伦·古尔德将其选作自己的第一张录音作品。')
+
+     item = Flashmoblist('《龙猫》快闪 宫崎骏电影',
+                         'http://120.25.207.78:8080/vod/longMiao.jpg',
+                         'http://120.25.207.78:8080/vod/longMiao.mp4',
+                         '东京街头的龙猫主题曲快闪')
 
      db.session.add(item)
 
      item2 = Flashmoblist('饮酒歌"茶花女"',
-                         'http://120.25.207.78:8080/vod/laTraviata.jpg',
-                         'http://120.25.207.78:8080/vod/laTraviata.3gp',
+                         'http://120.25.207.78:8080/vod/LaTraviata.jpg',
+                         'http://120.25.207.78:8080/vod/LaTraviata.mp4',
                          '作于1853年。为所作的歌剧《茶花女》中第一幕唱段。\
                          当时男主角阿尔弗雷多在女主人公薇奥莱塔举行的宴会中举杯祝贺，\
                          用歌声表达对薇奥莱塔的爱慕之心，薇奥莱塔也在祝酒时作了巧妙回答。')
@@ -64,7 +69,7 @@ def save_flashmob():
 
      item3 = Flashmoblist('欢乐颂',
                          'http://120.25.207.78:8080/vod/Odetojoy.jpg',
-                         'http://120.25.207.78:8080/vod/Odetojoy.3gp',
+                         'http://120.25.207.78:8080/vod/Odetojoy.mp4',
                          '该作品是古典音乐中最为人所熟知的作品之一，亦属于贝多芬最杰出的作品。')
 
      db.session.add(item3)
