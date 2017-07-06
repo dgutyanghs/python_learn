@@ -67,12 +67,24 @@ def save_flashmob():
      db.session.add(item2)
 
 
-     item3 = Flashmoblist('欢乐颂',
+     item3 = Flashmoblist('欢乐颂 快闪',
                          'http://120.25.207.78:8080/vod/Odetojoy.jpg',
                          'http://120.25.207.78:8080/vod/Odetojoy.mp4',
                          '该作品是古典音乐中最为人所熟知的作品之一，亦属于贝多芬最杰出的作品。')
 
      db.session.add(item3)
+
+     item4 = Flashmoblist('<You Raise Me Up> 街头快闪Martin Hurkens',
+                         'http://120.25.207.78:8080/vod/youRaiseMeup.jpg',
+                         'http://120.25.207.78:8080/vod/youRaiseMeup.mp4',
+                         '2010年荷兰好声音(Holland’s Got Talent)冠军\
+                         MartinHurkens!他生于1953年12月16日。\
+                         2010年,以57岁祖父级的年龄参赛,并夺得冠军,优雅的男高音,令众人惊艳。\
+                         他追求梦想的勇气令人佩服不已,他的声音可说是天使的声音洗涤人心!\
+                         寒街里的歌声~听了令人感动!')
+
+     db.session.add(item4)
+
      db.session.commit()
 
 @manager.command
