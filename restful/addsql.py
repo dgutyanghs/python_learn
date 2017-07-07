@@ -31,8 +31,17 @@ def query_pianonews():
 
 @manager.command
 def save_videos():
-    item2 = Videoslist('钢琴历史演进过程', 'http://120.25.207.78:8080/vod/Evolutionofthepiano.jpg',  'http://120.25.207.78:8080/vod/Evolutionofthepiano.m3u8', '钢琴的故事在1709年在意大利帕多瓦开始，在大键琴制造商名为Bartolomeo di Francesco Cristofori（1655-1731）的店里。 许多其他弦乐和键盘乐器都在钢琴之前，导致我们今天所知道的乐器的发展。本片简述钢琴历史演进过程')
+    item1 = Videoslist('从大键琴到现在钢琴(上集)',
+                       'http://120.25.207.78:8080/vod/pianoHistory1.jpg',\
+                       'http://120.25.207.78:8080/vod/pianoHistory1.m3u8',\
+                       '简述钢琴的进化过程')
 
+    item2 = Videoslist('从大键琴到现在钢琴(下集)',
+                       'http://120.25.207.78:8080/vod/pianoHistory2.jpg',\
+                       'http://120.25.207.78:8080/vod/pianoHistory2.m3u8',\
+                       '简述钢琴的进化过程')
+
+    db.session.add(item1)
     db.session.add(item2)
     db.session.commit()
 
