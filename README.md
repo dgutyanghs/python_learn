@@ -2,26 +2,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org86aa045">1. Python 自学</a>
+<li><a href="#org8cc2a7d">1. Python 自学</a>
 <ul>
-<li><a href="#orge01ef35">1.1. flask 学习过程中练手代码</a>
+<li><a href="#org82067a8">1.1. flask 学习过程中练手代码</a>
 <ul>
-<li><a href="#org781d415">1.1.1. mongodb 基本连接</a></li>
-<li><a href="#org8187295">1.1.2. mySQL 连接</a></li>
-<li><a href="#org4cc6d1e">1.1.3. Restful Demo</a></li>
-<li><a href="#org2313dc3">1.1.4. 图片下载 Demo</a></li>
-<li><a href="#org7efcb94">1.1.5. 图片链接json格式返回</a></li>
+<li><a href="#org8fd7f2e">1.1.1. mongodb 基本连接</a></li>
+<li><a href="#org265a01b">1.1.2. mySQL 连接</a></li>
+<li><a href="#org8f98f31">1.1.3. Restful Demo</a></li>
+<li><a href="#orgbf8bac3">1.1.4. 图片下载 Demo</a></li>
+<li><a href="#org9a1483a">1.1.5. 图片链接json格式返回</a></li>
 </ul>
 </li>
-<li><a href="#orga4a5dfe">1.2. python版本相关</a>
+<li><a href="#org204e2e2">1.2. python版本相关</a>
 <ul>
-<li><a href="#org3f4564c">1.2.1. virtualenv 下指定python版本</a></li>
+<li><a href="#org9b3bf09">1.2.1. virtualenv 下指定python版本</a></li>
 </ul>
 </li>
-<li><a href="#orgb54339c">1.3. scrapy初试</a>
+<li><a href="#orgd4550e2">1.3. scrapy初试</a>
 <ul>
-<li><a href="#orgc9840d3">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
-<li><a href="#org8b17cc9">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
+<li><a href="#orgb453515">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
+<li><a href="#orgf2decb0">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
 </ul>
 </li>
 </ul>
@@ -30,17 +30,17 @@
 </div>
 </div>
 
-<a id="org86aa045"></a>
+<a id="org8cc2a7d"></a>
 
 # Python 自学
 
 
-<a id="orge01ef35"></a>
+<a id="org82067a8"></a>
 
 ## flask 学习过程中练手代码
 
 
-<a id="org781d415"></a>
+<a id="org8fd7f2e"></a>
 
 ### mongodb 基本连接
 
@@ -48,10 +48,10 @@
     代码文件夹:mongodb_test  
     lib1(未使用ORM): pymongo, flask_script,  Manager
     lib2(使用ORM): flask_mongoengine, flask_script
-    代码:mongodb_test
+    代码:mongodb_test 
 
 
-<a id="org8187295"></a>
+<a id="org265a01b"></a>
 
 ### mySQL 连接
 
@@ -69,6 +69,7 @@
 
 3.  Change MySQL password
 
+        
         mysql> SET PASSWORD FOR 'tom'@'localhost' = PASSWORD('foobar');
         mysql> FLUSH PRIVILEGES;
         mysql> quit;
@@ -87,6 +88,7 @@
 
 5.  MySQL 中文乱码的solution
 
+        
         CREATE DATABASE mydb
           DEFAULT CHARACTER SET utf8
           DEFAULT COLLATE utf8_general_ci;
@@ -114,8 +116,25 @@
         > ALTER TABLE  `videoslist` ADD  `index` INT( 11 ) NOT NULL  PRIMARY KEY AUTO_INCREMENT FIRST
         注意` ` 不是' '号
 
+8.  MySQL 的table名字区分大小写
 
-<a id="org4cc6d1e"></a>
+    可用下面SQL更改表名
+    
+        $: RENAME TABLE old_table TO new_table;
+
+9.  MySQL 创建Table
+
+        CREATE TABLE `videoslisttest` (
+          `index` int(11) NOT NULL AUTO_INCREMENT,
+          `title` varchar(255) DEFAULT NULL,
+          `cover` varchar(255) DEFAULT NULL,
+          `mp4_url` varchar(255) DEFAULT NULL,
+          `desc` varchar(1000) DEFAULT NULL,
+          PRIMARY KEY (`index`)
+        ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+
+<a id="org8f98f31"></a>
 
 ### Restful Demo
 
@@ -124,7 +143,7 @@
     代码文件夹：restful 
 
 
-<a id="org2313dc3"></a>
+<a id="orgbf8bac3"></a>
 
 ### 图片下载 Demo
 
@@ -135,7 +154,7 @@
         using this link  to download file http://localhost:5000/images/image2.png
 
 
-<a id="org7efcb94"></a>
+<a id="org9a1483a"></a>
 
 ### 图片链接json格式返回
 
@@ -153,36 +172,44 @@
         Browser未能正常播放
 
 
-<a id="orga4a5dfe"></a>
+<a id="org204e2e2"></a>
 
 ## python版本相关
 
 
-<a id="org3f4564c"></a>
+<a id="org9b3bf09"></a>
 
 ### virtualenv 下指定python版本
+
+    
+    $ sudo apt-get install python-pip
+    $ sudo apt-get install python-virtualenv
 
     when create virtual environment, using shell command:
     $ virtualenv --python=python2.7 venv
     创建 venv
 
+    # //默认情况下，虚拟环境会依赖系统环境中的site packages，
+    #就是说系统中已经安装好的第三方package也会安装在虚拟环境中，如果不想依赖这些package，那么可以加上参数 --no-site-packages建立虚拟环境
+    $ virtualenv --no-site-package venv
 
-<a id="orgb54339c"></a>
+
+<a id="orgd4550e2"></a>
 
 ## scrapy初试
 
 
-<a id="orgc9840d3"></a>
+<a id="orgb453515"></a>
 
 ### 简单的豆瓣网爬取:tutorial
 
 1.  使用scrapy, python2.7
 
         $scrapy crawl dmoz  
-        在项目主目录下执行
+        在项目主目录下执行 
 
 
-<a id="org8b17cc9"></a>
+<a id="orgf2decb0"></a>
 
 ### Meizi网站图片爬取：Meizitu
 

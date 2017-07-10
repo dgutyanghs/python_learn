@@ -53,9 +53,9 @@ def query_videos():
 
 @manager.command
 def save_flashmob():
-     # item = Flashmoblist('歌德堡变奏曲第1变奏',
-     #                     'http://120.25.207.78:8080/vod/goldbergVar1.jpg',
-     #                     'http://120.25.207.78:8080/vod/goldbergVar1.mp4',
+     # item = Flashmoblist('歌德堡变奏曲第一变奏',
+     #                     'https://120.25.207.78:8080/vod/goldbergVar1.jpg',
+     #                     'https://120.25.207.78:8080/vod/goldbergVar1.mp4',
      #                     '哥德堡变奏被视为巴赫作品中最重要的变奏曲之一, \
      #                     1955年加拿大钢琴家格伦·古尔德将其选作自己的第一张录音作品。')
 

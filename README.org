@@ -72,8 +72,20 @@ or
 注意` ` 不是' '号
 #+END_SRC
 ***** MySQL 的table名字区分大小写
+可用下面SQL更改表名
 #+BEGIN_SRC sql 
 $: RENAME TABLE old_table TO new_table;
+#+END_SRC
+***** MySQL 创建Table
+#+BEGIN_SRC SQL
+CREATE TABLE `videoslisttest` (
+  `index` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `cover` varchar(255) DEFAULT NULL,
+  `mp4_url` varchar(255) DEFAULT NULL,
+  `desc` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`index`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 #+END_SRC
 *** Restful Demo
 **** 使用到：flask_restful, reqparse, abort, Api, Resource
@@ -103,11 +115,25 @@ Browser未能正常播放
 #+END_EXAMPLE
 ** python版本相关
 *** virtualenv 下指定python版本
+#+BEGIN_SRC shell
+
+$ sudo apt-get install python-pip
+$ sudo apt-get install python-virtualenv
+
+#+END_SRC
+
 #+BEGIN_EXAMPLE
 when create virtual environment, using shell command:
 $ virtualenv --python=python2.7 venv
 创建 venv
 #+END_EXAMPLE
+
+#+BEGIN_SRC bash
+# //默认情况下，虚拟环境会依赖系统环境中的site packages，
+#就是说系统中已经安装好的第三方package也会安装在虚拟环境中，如果不想依赖这些package，那么可以加上参数 --no-site-packages建立虚拟环境
+$ virtualenv --no-site-package venv
+
+#+END_SRC
 ** scrapy初试 
 *** 简单的豆瓣网爬取:tutorial
 **** 使用scrapy, python2.7
