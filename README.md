@@ -2,26 +2,26 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8cc2a7d">1. Python 自学</a>
+<li><a href="#orga288dd5">1. Python 自学</a>
 <ul>
-<li><a href="#org82067a8">1.1. flask 学习过程中练手代码</a>
+<li><a href="#orgc64112d">1.1. flask 学习过程中练手代码</a>
 <ul>
-<li><a href="#org8fd7f2e">1.1.1. mongodb 基本连接</a></li>
-<li><a href="#org265a01b">1.1.2. mySQL 连接</a></li>
-<li><a href="#org8f98f31">1.1.3. Restful Demo</a></li>
-<li><a href="#orgbf8bac3">1.1.4. 图片下载 Demo</a></li>
-<li><a href="#org9a1483a">1.1.5. 图片链接json格式返回</a></li>
+<li><a href="#orgf68bd34">1.1.1. mongodb 基本连接</a></li>
+<li><a href="#org37291e7">1.1.2. mySQL 连接</a></li>
+<li><a href="#org44bc49f">1.1.3. Restful Demo</a></li>
+<li><a href="#orga667c04">1.1.4. 图片下载 Demo</a></li>
+<li><a href="#org19e853a">1.1.5. 图片链接json格式返回</a></li>
 </ul>
 </li>
-<li><a href="#org204e2e2">1.2. python版本相关</a>
+<li><a href="#org9cc722d">1.2. python版本相关</a>
 <ul>
-<li><a href="#org9b3bf09">1.2.1. virtualenv 下指定python版本</a></li>
+<li><a href="#org3c69369">1.2.1. virtualenv 下指定python版本</a></li>
 </ul>
 </li>
-<li><a href="#orgd4550e2">1.3. scrapy初试</a>
+<li><a href="#org15029a8">1.3. scrapy初试</a>
 <ul>
-<li><a href="#orgb453515">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
-<li><a href="#orgf2decb0">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
+<li><a href="#org943c107">1.3.1. 简单的豆瓣网爬取:tutorial</a></li>
+<li><a href="#orgfdf0255">1.3.2. Meizi网站图片爬取：Meizitu</a></li>
 </ul>
 </li>
 </ul>
@@ -30,17 +30,17 @@
 </div>
 </div>
 
-<a id="org8cc2a7d"></a>
+<a id="orga288dd5"></a>
 
 # Python 自学
 
 
-<a id="org82067a8"></a>
+<a id="orgc64112d"></a>
 
 ## flask 学习过程中练手代码
 
 
-<a id="org8fd7f2e"></a>
+<a id="orgf68bd34"></a>
 
 ### mongodb 基本连接
 
@@ -51,7 +51,7 @@
     代码:mongodb_test 
 
 
-<a id="org265a01b"></a>
+<a id="org37291e7"></a>
 
 ### mySQL 连接
 
@@ -66,6 +66,13 @@
           $ mysql -u root -p
         if have password , then enter....
           $ yourpassword
+    
+    需要pip安装 mysql-python ,不然连接不上MySQL， ubuntu下用Shell安装
+    
+        $sudo apt-get install libmysqld-dev
+        ...
+        
+        $pip install mysql-python
 
 3.  Change MySQL password
 
@@ -134,7 +141,7 @@
         ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 
-<a id="org8f98f31"></a>
+<a id="org44bc49f"></a>
 
 ### Restful Demo
 
@@ -143,7 +150,7 @@
     代码文件夹：restful 
 
 
-<a id="orgbf8bac3"></a>
+<a id="orga667c04"></a>
 
 ### 图片下载 Demo
 
@@ -154,7 +161,7 @@
         using this link  to download file http://localhost:5000/images/image2.png
 
 
-<a id="org9a1483a"></a>
+<a id="org19e853a"></a>
 
 ### 图片链接json格式返回
 
@@ -172,12 +179,12 @@
         Browser未能正常播放
 
 
-<a id="org204e2e2"></a>
+<a id="org9cc722d"></a>
 
 ## python版本相关
 
 
-<a id="org9b3bf09"></a>
+<a id="org3c69369"></a>
 
 ### virtualenv 下指定python版本
 
@@ -194,12 +201,12 @@
     $ virtualenv --no-site-package venv
 
 
-<a id="orgd4550e2"></a>
+<a id="org15029a8"></a>
 
 ## scrapy初试
 
 
-<a id="orgb453515"></a>
+<a id="org943c107"></a>
 
 ### 简单的豆瓣网爬取:tutorial
 
@@ -209,7 +216,7 @@
         在项目主目录下执行 
 
 
-<a id="orgf2decb0"></a>
+<a id="orgfdf0255"></a>
 
 ### Meizi网站图片爬取：Meizitu
 

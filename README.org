@@ -22,6 +22,14 @@ if have password , then enter....
   $ yourpassword
 
 #+END_EXAMPLE
+需要pip安装 mysql-python ,不然连接不上MySQL， ubuntu下用Shell安装
+#+BEGIN_SRC Bash
+$sudo apt-get install libmysqld-dev
+...
+
+$pip install mysql-python
+
+#+END_SRC
 ***** Change MySQL password
 #+BEGIN_EXAMPLE
 
