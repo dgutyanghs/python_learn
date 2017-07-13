@@ -29,7 +29,7 @@ class Hotnews(Resource):
         return jsonify(pianonews = [item.serialize for item in Pianonews.query.all()]) 
 
 
-api.add_resource(Hotnews, '/hotnews')
+api.add_resource(Hotnews, '/api/hotnews')
 
 
 parser = reqparse.RequestParser()
@@ -42,7 +42,7 @@ class Download(Resource):
         abort(404)
 
 
-api.add_resource(Download, '/images/<string:imageid>')
+api.add_resource(Download, '/api/images/<string:imageid>')
 
 
 class VideoInfo(Resource):
@@ -52,7 +52,7 @@ class VideoInfo(Resource):
         # return jsonify(videoslist = [item.serialize for item in Videoslist.query.all()]) 
 
 
-api.add_resource(VideoInfo, '/videoinfo')
+api.add_resource(VideoInfo, '/api/videoinfo')
 
 
 
