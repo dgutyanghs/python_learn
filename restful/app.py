@@ -70,7 +70,7 @@ class FlashmobInfo(Resource):
         return jsonify(flashmobinfolist = [item.serialize for item in Flashmoblist.query.order_by(desc(Flashmoblist.index))]) 
         # return jsonify(videoslist = [item.serialize for item in Videoslist.query.all()]) 
 
-api.add_resource(FlashmobInfo, '/flashmobinfo')
+api.add_resource(FlashmobInfo, '/api/flashmobinfo')
 
 
 
