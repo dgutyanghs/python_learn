@@ -12,10 +12,10 @@ manager = Manager(app)
 
 @manager.command
 def save_pianonews():
-    user = Pianonews(5, 'Yamaha 古典钢琴', '/images/yamaha_1.jpg')
+    user = Pianonews(5, 'Yamaha 古典钢琴', '/images/yamaha_1.jpeg')
     db.session.add(user)
 
-    user2 = Pianonews(6, 'Kawai 古典钢琴', '/images/kawai_1.jpg')
+    user2 = Pianonews(6, 'Kawai 古典钢琴', '/images/kawai_1.jpeg')
 
     db.session.add(user2)
     db.session.commit()
@@ -32,12 +32,12 @@ def query_pianonews():
 @manager.command
 def save_videos():
     item1 = Videoslist('从大键琴到现在钢琴(上集)',
-                       '/vod/pianoHistory1.jpg',\
+                       '/vod/pianoHistory1.jpeg',\
                        '/vod/pianoHistory1.m3u8',\
                        '简述钢琴的进化过程')
 
     item2 = Videoslist('从大键琴到现在钢琴(下集)',
-                       '/vod/pianoHistory2.jpg',\
+                       '/vod/pianoHistory2.jpeg',\
                        '/vod/pianoHistory2.m3u8',\
                        '简述钢琴的进化过程')
 
@@ -54,14 +54,14 @@ def query_videos():
 @manager.command
 def save_flashmob():
      item = Flashmoblist('《龙猫》快闪 宫崎骏电影',
-                         '/vod/longMiao.jpg',
+                         '/vod/longMiao.jpeg',
                          '/vod/longMiao.mp4',
                          '东京街头的龙猫主题曲快闪')
 
      db.session.add(item)
 
      item2 = Flashmoblist('饮酒歌"茶花女"',
-                         '/vod/LaTraviata.jpg',
+                         '/vod/LaTraviata.jpeg',
                          '/vod/LaTraviata.mp4',
                          '作于1853年。为所作的歌剧《茶花女》中第一幕唱段。\
                          当时男主角阿尔弗雷多在女主人公薇奥莱塔举行的宴会中举杯祝贺，\
@@ -71,14 +71,14 @@ def save_flashmob():
 
 
      item3 = Flashmoblist('欢乐颂 快闪',
-                         '/vod/Odetojoy.jpg',
+                         '/vod/Odetojoy.jpeg',
                          '/vod/Odetojoy.mp4',
                          '该作品是古典音乐中最为人所熟知的作品之一，亦属于贝多芬最杰出的作品。')
 
      db.session.add(item3)
 
      item4 = Flashmoblist('<You Raise Me Up> 街头快闪Martin Hurkens',
-                         '/vod/youRaiseMeup.jpg',
+                         '/vod/youRaiseMeup.jpeg',
                          '/vod/youRaiseMeup.mp4',
                          '2010年荷兰好声音(Holland’s Got Talent)冠军\
                          MartinHurkens!他生于1953年12月16日。\
@@ -89,7 +89,7 @@ def save_flashmob():
      db.session.add(item4)
 
      item5 = Flashmoblist('歌德堡变奏曲第一变奏',
-                          '/vod/goldbergVar1.jpg',
+                          '/vod/goldbergVar1.jpeg',
                           '/vod/goldbergVar1.mp4',
                           '哥德堡变奏被视为巴赫作品中最重要的变奏曲之一, \
                           1955年加拿大钢琴家格伦·古尔德将其选作自己的第一张录音作品。')
