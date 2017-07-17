@@ -75,8 +75,8 @@ api.add_resource(FlashmobInfo, '/api/flashmobinfo')
 
 class BachInventionInfo(Resource):
     def post(self):
-        from models import BachInventionInfo
-        return jsonify(bachinventioninfo = [item.serialize for item in BachInventionInfo.query.order_by(desc(BachInventionInfo.index))]) 
+        from models import Bachinventioninfo
+        return jsonify(bachinventioninfo = [item.serialize for item in Bachinventioninfo.query.order_by(desc(Bachinventioninfo.index))]) 
 
 api.add_resource(BachInventionInfo, '/api/bachinventioninfo')
 
