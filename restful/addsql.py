@@ -5,6 +5,7 @@ from app import app, db
 from models import Pianonews
 from models import Videoslist
 from models import Flashmoblist
+from models import Bachinventioninfo
 
 
 manager = Manager(app)
@@ -102,6 +103,29 @@ def save_flashmob():
 def query_flashmob():
     flashs = Flashmoblist.query.all()
     for item in flashs:
+        print item
+
+
+
+@manager.command
+def save_bachinvention():
+    for i in range(772, 786):
+            name = "bwv"+str(i)
+            imageName = name + '.jpg'
+            videoName = name + '.mp4'
+            item = Bachinventioninfo('Invention ' + name,
+                                     '/vod/' + imageName,
+                                     '/vod/' + videoName,
+                                     'Johann Sebastian Bach, inventions ' + name)
+
+            db.session.add(item)
+            db.session.commit()
+
+
+@manager.command
+def query_bachinvention():
+    info = Bachinventioninfo.query.all()
+    for item in info:
         print item
 
 if __name__ == '__main__':

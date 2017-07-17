@@ -73,9 +73,15 @@ class FlashmobInfo(Resource):
 api.add_resource(FlashmobInfo, '/api/flashmobinfo')
 
 
+class BachInventionInfo(Resource):
+    def post(self):
+        from models import BachInventionInfo
+        return jsonify(bachinventioninfo = [item.serialize for item in BachInventionInfo.query.order_by(desc(BachInventionInfo.index))]) 
+
+api.add_resource(BachInventionInfo, '/api/bachinventioninfo')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8081)
+    app.run(host='127.0.0.1', port=8081)
 
 
 

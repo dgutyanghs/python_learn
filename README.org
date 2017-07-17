@@ -155,3 +155,17 @@ $scrapy crawl dmoz
 #+BEGIN_EXAMPLE
 $ scrapy crawl meizi
 #+END_EXAMPLE
+** Nginx 配置参考
+*** mime type
+client请求的URL中，如带mime类型 nginx默认返回该类型。如（https://yourDomain/image/logo.jpeg） content-type : image/jpeg
+在设置中加入 
+#+BEGIN_EXAMPLE
+location /image {
+     include mime.types;
+     types {
+     # other type except mime.types;
+     }
+
+}
+#+END_EXAMPLE
+
