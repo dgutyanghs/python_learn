@@ -56,7 +56,7 @@ api.add_resource(VideoInfo, '/api/videoinfo')
 
 class Swinfo(Resource):
     def post(self):
-        info = {"sw":"2.7", "msg":"please update this app"}
+        info = {"sw":"3.1", "msg":"please update this app"}
         return jsonify(info)
 
 api.add_resource(Swinfo, '/api/swinfo')
