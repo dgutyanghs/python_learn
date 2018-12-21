@@ -180,5 +180,4 @@ location /image {
     /var/log/supervisor
     in this dictionary, some name like: [your project name]-stderr---supervisor-TuNEf.log
     #+END_EXAMPLE
-*** [[https:https://github.com/shadowsocks/shadowsocks/wiki/%25E7%2594%25A8-Supervisor-%25E8%25BF%2590%25E8%25A1%258C-Shadowsocks][参考文章]]
-
+*** 其他supervisor的命令请：[[https://github.com/shadowsocks/shadowsocks/wiki/%E7%94%A8-Supervisor-%E8%BF%90%E8%A1%8C-Shadowsocks][参考文章]]
