@@ -1,0 +1,171 @@
+:* Python ’¼«’³Ø
+** flask ’³Ø‘Ï°‘¹ý’Äø’Ãæ‘Á·’¼ê’Âå‘Âë 
+*** mongodb ’´ð’ËÜ‘Á¬’ÀÜ
+#+BEGIN_EXAMPLE
+    ”á½’¹Ô‘»·’¶­: python3.5
+    ’Âå‘Âë’Ê¸’·ï‘¼Ð:mongodb_test  
+    lib1(’Ì¤’»È’ÍÑORM): pymongo, flask_script,  Manager
+    lib2(’»È’ÍÑORM): flask_mongoengine, flask_script
+    ’Âå‘Âë:mongodb_test 
+#+END_EXAMPLE
+*** mySQL ‘Á¬’ÀÜ
+***** mySQL ’Éþ‘Îñ’´ï”´ë‘¶¯’Ì¿’Îá
+#+BEGIN_EXAMPLE
+  $ mysql.server start
+  $ mysql.server stop
+  $ mysql.server restart
+#+END_EXAMPLE
+***** mySQL ‘Á¬’ÀÜ’Éþ‘Îñ’´ï 
+#+BEGIN_EXAMPLE
+  $ mysql -u root -p
+if have password , then enter....
+  $ yourpassword
+
+#+END_EXAMPLE
+’¼û’Í×pip’°Â’Áõ mysql-python ,’ÉÔ’Á³‘Á¬’ÀÜ’ÉÔ’¾åMySQL’¡¤ ubuntu’²¼’ÍÑShell’°Â’Áõ
+#+BEGIN_SRC Bash
+$sudo apt-get install libmysqld-dev
+...
+
+$pip install mysql-python
+
+#+END_SRC
+***** Change MySQL password
+#+BEGIN_EXAMPLE
+
+mysql> SET PASSWORD FOR 'tom'@'localhost' = PASSWORD('foobar');
+mysql> FLUSH PRIVILEGES;
+mysql> quit;
+
+$ mysql -u tom -p
+$ yourpassword
+
+then login ok
+
+#+END_EXAMPLE
+***** mySQL ’ÅªORM, json serialize
+      #+BEGIN_EXAMPLE
+       mysql_test ’ÌÜ‘Â¼’²¼’¡§ app.py, manager.py, modules.py 
+       >>>python manager save
+       ...
+       >>> python manager query_all
+      #+END_EXAMPLE
+***** MySQL ’Ãæ’Ê¸’Íð‘Âë’Åªsolution
+#+BEGIN_EXAMPLE
+
+CREATE DATABASE mydb
+  DEFAULT CHARACTER SET utf8
+  DEFAULT COLLATE utf8_general_ci;
+#+END_EXAMPLE
+***** SqlAlchemy query ‘½á’²Ì’ÇÓ’½ø desc
+#+BEGIN_SRC python
+class Hotnews(Resource):
+    def get(self):
+        from models import Pianonews
+        return jsonify(pianonews = [item.serialize for item in Pianonews.query.order_by(desc(Pianonews.index))])
+        #return jsonify(pianonews = [item.serialize for item in Pianonews.query.all()]) 
+
+
+    def post(self):
+        from models import Pianonews
+        return jsonify(pianonews = [item.serialize for item in Pianonews.query.all()])
+#+END_SRC
+‘¼û restful app.py’Ê¸’·ï
+***** Mysql ’¹¹’²þ’É½’ÅªAuto increment
+#+BEGIN_SRC sql 
+> ALTER TABLE `videoslist` CHANGE COLUMN `index` `index` INT(4) NOT NULL AUTO_INCREMENT;
+
+or
+> ALTER TABLE  `videoslist` ADD  `index` INT( 11 ) NOT NULL  PRIMARY KEY AUTO_INCREMENT FIRST
+’Ãí’°Õ` ` ’ÉÔ’À§' '’¹æ
+#+END_SRC
+***** MySQL ’Åªtable’Ì¾’»ú’¶è’Ê¬’Âç’¾®’¼Ì
+’²Ä’ÍÑ’²¼’ÌÌSQL’¹¹’²þ’É½’Ì¾
+#+BEGIN_SRC sql 
+$: RENAME TABLE old_table TO new_table;
+#+END_SRC
+***** MySQL ‘´´’·úTable
+#+BEGIN_SRC SQL
+CREATE TABLE `videoslisttest` (
+  `index` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) DEFAULT NULL,
+  `cover` varchar(255) DEFAULT NULL,
+  `mp4_url` varchar(255) DEFAULT NULL,
+  `desc` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`index`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+#+END_SRC
+*** Restful Demo
+**** ’»È’ÍÑ’Åþ’¡§flask_restful, reqparse, abort, Api, Resource
+’Âå‘Âë’Ê¸’·ï‘¼Ð’¡§restful 
+*** ‘Í¼’ÊÒ’²¼‘ÔØ Demo
+**** ’»È’ÍÑ’Åþ request, send_from_directory, abort == 
+    #+BEGIN_EXAMPLE
+    ’Ê¸’·ï‘¼Ð:picture 
+    ‘Í¼’ÊÒ‘×Ê’¸»:picture/images/*.png
+    using this link  to download file http://localhost:5000/images/image2.png
+    #+END_EXAMPLE
+
+*** ‘Í¼’ÊÒ‘Á´’ÀÜjson’³Ê’¼°’ÊÖ’²ó 
+**** flask_restful, send_from_directory ==
+#+BEGIN_EXAMPLE
+’Âå‘Âë’Ê¸’·ï‘¼Ð’¡§restful -> jsonrestful.py
+‘Í¼’ÊÒ‘×Ê’¸»: restful -> images/xxx.jpg ==
+#+END_EXAMPLE
+
+**** WSGI’Éþ‘Îñ’´ïGunicorn ”´ë‘¶¯app ’Ì¿’Îá
+#+BEGIN_EXAMPLE
+$gunicorn -b 0.0.0.0:8080 yourapp:app
+#+END_EXAMPLE
+**** flask’ÊÖ’²óHTML5’Åª‘ÊÓ‘Æµ
+#+BEGIN_EXAMPLE
+Browser’Ì¤’Ç½’Àµ’¾ï’ÇÅ’Êü
+#+END_EXAMPLE
+** python’ÈÇ’ËÜ’Áê‘¹Ø
+*** virtualenv ’²¼’»Ø’Äêpython’ÈÇ’ËÜ
+#+BEGIN_SRC shell
+
+$ sudo apt-get install python-pip
+$ sudo apt-get install python-virtualenv
+
+#+END_SRC
+
+#+BEGIN_EXAMPLE
+when create virtual environment, using shell command:
+$ virtualenv --python=python2.7 venv
+‘´´’·ú venv
+#+END_EXAMPLE
+
+#+BEGIN_SRC bash
+# //’àÔ‘ÈÏ’¾ð’Ñ×’²¼’¡¤’µõ‘Äâ‘»·’¶­’²ñ’°Í‘Àµ’·Ï‘Í³‘»·’¶­’Ãæ’Åªsite packages’¡¤
+#’½¢’À§‘Ëµ’·Ï‘Í³’Ãæ’Öá‘¾­’°Â’Áõ’¹¥’Åª’Âè’»°’Êýpackage’Ìé’²ñ’°Â’Áõ’ºß’µõ‘Äâ‘»·’¶­’Ãæ’¡¤’Ç¡’²Ì’ÉÔ’ÁÛ’°Í‘Àµ‘Õâ’º³package’¡¤’Æá˜¦¾’²Ä’°Ê’²Ã’¾å’»²’¿ô --no-site-packages’·ú’Î©’µõ‘Äâ‘»·’¶­
+$ virtualenv --no-site-package venv
+
+#+END_SRC
+** scrapy’½é‘ÊÔ 
+*** ‘¼ò‘µ¥’Åª’Æ¦’á¢’æ¦’à¨’¼è:tutorial
+**** ’»È’ÍÑscrapy, python2.7
+#+BEGIN_EXAMPLE
+$scrapy crawl dmoz  
+’ºß‘Ïî’ÌÜ’¼ç’ÌÜ‘Â¼’²¼‘Ö´’¹Ô 
+#+END_EXAMPLE
+ 
+*** Meizi’æ¦’ãë‘Í¼’ÊÒ’à¨’¼è’¡§Meizitu
+**** ’»È’ÍÑscrapy’¡¤ python2.7, requests 
+#+BEGIN_EXAMPLE
+$ scrapy crawl meizi
+#+END_EXAMPLE
+** Nginx ’ÇÛ’ÃÖ’»²’¹Í
+*** mime type
+client‘Çë’µá’ÅªURL’Ãæ’¡¤’Ç¡‘´ømime‘Àà’·¿ nginx’àÔ‘ÈÏ’ÊÖ’²ó‘¸Ã‘Àà’·¿’¡£’Ç¡’¡Êhttps://yourDomain/image/logo.jpeg’¡Ë content-type : image/jpeg
+’ºß‘Éè’ÃÖ’Ãæ’²Ã’Æþ 
+#+BEGIN_EXAMPLE
+location /image {
+     include mime.types;
+     types {
+     # other type except mime.types;
+     }
+
+}
+#+END_EXAMPLE
+
