@@ -168,4 +168,15 @@ location /image {
 
 }
 #+END_EXAMPLE
+** Supervisorctl查看log 
+*** display log in terminal realtime
+#+BEGIN_SRC bash
 
+#supervisorctl tail -f [your project name] stderr
+
+#+END_SRC
+*** path of log file for supervisor 
+    #+BEGIN_EXAMPLE
+    /var/log/supervisor
+    in this dictionary, some name like: [your project name]-stderr---supervisor-TuNEf.log
+    #+END_EXAMPLE
